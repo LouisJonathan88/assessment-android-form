@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:layout_margin="12dp">
+
+        <!-- Judul-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_app"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#6200EE"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- NIM -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nim"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/edt_nim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nim_hint"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Nama -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nama"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/edt_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nama_hint"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Semester -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/semester"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="4dp"/>
+        <Spinner
+            android:id="@+id/spSemester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Informasi Perangkat -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_perangkat_device"
+            android:textColor="#6200EE"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Jenis Perangkat -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rad_device"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="4dp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F3EAFB"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp">
+            <RadioButton
+                android:id="@+id/rad_pc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_pc"/>
+            <RadioButton
+                android:id="@+id/rad_laptop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_laptop"/>
+            <RadioButton
+                android:id="@+id/rad_tidak_punya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_tidak_punya"/>
+        </RadioGroup>
+
+        <!-- Sistem Operasi -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rad_os"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="4dp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F3EAFB"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp">
+            <RadioButton
+                android:id="@+id/rad_windows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_windows"/>
+            <RadioButton
+                android:id="@+id/rad_linux"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_linux"/>
+            <RadioButton
+                android:id="@+id/rad_macOs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_macos"/>
+        </RadioGroup>
+
+        <!-- Versi OS -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/versi_os"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/edt_versi_os"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/versi_os_hint"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- RAM -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ram"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/edt_ram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ram_hint"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- CPU -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cpu"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/edt_cpu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cpu_hint"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Deployment -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rad_deploy"
+            android:textColor="#6200EE"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp"
+            android:background="#F3EAFB"
+            android:padding="8dp">
+            <RadioButton
+                android:id="@+id/rad_emulator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_emulator"/>
+            <RadioButton
+                android:id="@+id/rad_device_kabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_device_kabel"/>
+            <RadioButton
+                android:id="@+id/rad_device_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_device_wifi"/>
+            <RadioButton
+                android:id="@+id/rad_tidak_bisa_deploy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_tidak_bisa_deploy"/>
+        </RadioGroup>
+
+        <!-- Mobile Device -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_perangkat_mobile"
+            android:textColor="#6200EE"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Merk HP -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/merk_hp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spMerkHp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Versi OS HP -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/versi_os_hp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/edt_versi_os_hp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/versi_os_hp_hint"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Ukuran HP -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ukuran_hp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/edt_ukuranHp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ukuran_hp_hint"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Internet -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rad_internet"
+            android:textColor="#6200EE"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+        <RadioGroup
+            android:id="@+id/rad_internet_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp"
+            android:background="#F3EAFB"
+            android:padding="8dp">
+            <RadioButton
+                android:id="@+id/rad_tethering"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_tethering"/>
+            <RadioButton
+                android:id="@+id/rad_wifi_sendiri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_wifi_sendiri"/>
+            <RadioButton
+                android:id="@+id/rad_wifi_nebeng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_wifi_nebeng"/>
+            <RadioButton
+                android:id="@+id/rad_tidak_punya_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_tidak_punya_wifi"/>
+        </RadioGroup>
+
+        <!-- Install Android -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/install_android"
+            android:textColor="#6200EE"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rad_install_android"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="4dp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F3EAFB"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp">
+            <RadioButton
+                android:id="@+id/rad_sudahInstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_install_sudah"/>
+            <RadioButton
+                android:id="@+id/rad_belumInstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_install_belum"/>
+            <RadioButton
+                android:id="@+id/rad_tidakBisaInstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_install_tidak_bisa"/>
+        </RadioGroup>
+
+        <!-- Versi Android -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/versi_install_android"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/edt_versiInstallAndroid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/versi_install_android_hint"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Tombol Submit -->
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+</ScrollView>
